@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registeration</title>
+<script>
+function pass_validate(){
+	var pass=document.f1.pass.value;
+	var pass1=document.f1.pass1.value;
+	if(pass==pass1)
+	{
+		return true;
+	}
+	else
+	{
+		alert("password must same");
+		return false;
+	}
+}
+function show_hidd(){
+	var x=document.getElementById("same");
+	if(x.type=="password") {
+		x.type="text";
+	}
+	else{
+		x.type="password";
+	}
+}
+</script>
+<link rel="stylesheet" type="text/css" href="./airline_reg_css.css">
+</head>
+<body>
+<center>
+    <h2><i>REGISTRATION FORM</i></h2>
+<form name="f1" action="airline_reg_php.php" method="POST">
+<table>
+<tr>
+  <td><label for="name"><b>UserName </b></label></td>
+  <td><input type="text" name="name" placeholder="Enter Name..." required autofocus></td>
+</tr>
+<tr>
+  <td><label for="email"><b>Email</b></label></td>
+  <td><input type="email" name="email" placeholder="Enter Email..." required></td>
+</tr>
+<tr>
+  <td><label for="pass"><b>Password</b></label></td>
+  <td><input type="password" name="pass" id="same" placeholder="Enter Password..." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Atleast 8 character must contain atleast one in lower case and upper case and number" required></td>
+</tr>
+<tr>
+  <td><label for="pass1"><b>Re-Enter Password</b></label></td>
+  <td><input type="password" name="pass1" placeholder="Re-Enter Password..." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Atleast 8 character must contain atleast one in lower case and upper case and number" required></td>
+</tr>
+<tr>
+    <td><input type="checkbox" onclick="show_hidd()" style="padding:10px;">Show Password<br><br></td>
+</tr>
+<tr>
+  <td><label for="gender"><b>Gender</b></label></td>
+  <td><input type="radio" name="gender" value="male" checked>Male</td>
+  <td><input type="radio" name="gender" value="female">Female</td>
+</tr>
+<tr>
+  <td><label for="dob"><b>Date of Birth</b></label></td>
+  <td><input type="date" name="dob" required></td>
+</tr>
+<tr>
+  <td><label for="phone"><b>Phone Number</b></label></td>
+  <td><input type="tel" name="phone" pattern="[0-9]{10}" placeholder="Enter phone..." required></td>
+</tr>
+<tr>
+  <td><label for="address"><b>Address</b></label></td>
+  <td><input type="text" name="address" placeholder="Enter address..." required></td>
+</tr>
+<tr>
+  <td rowspan="2"><label for="city"><b>State & City</b></label></td>
+  <td><input type="text" name="state" placeholder="Enter State..." required></td>
+</tr>
+<tr>
+  <td><input type="text" name="city" placeholder="Enter City..." required></td>
+</tr>
+<tr>
+  <td><label for="country"><b>Country</b></label></td>
+  <td><select name="country">
+		<option value="india" selected>India</option>
+		<option value="america">America</option>
+		<option value="iceland">Iceland</option>
+		<option value="england">England</option>
+		<option value="australia">Australia</option>
+	</select>
+  </td>
+</tr>
+<tr>
+	<td><br><button id="rst" type="reset" name="reset">Cancel</button></td>
+    <td><br><button type="submit" name="register" onclick="return pass_validate()">Register</button></td>
+</tr>
+</table>
+</form>
+</center>
+</body>
+</html>

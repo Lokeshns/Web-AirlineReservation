@@ -1,0 +1,24 @@
+input[type=text],input[type=number],label,input[type=file]{
+	width: 100%;
+	padding: 10px;
+	margin: 10px 100px;
+	box-sizing: border-box;
+	margin-left:40px;
+}
+form{
+	margin-left: 500px;
+	margin-right: 250px;
+}
+input[type=radio]{
+	padding: 100px;
+	margin: 15px 100px;
+	box-sizing: border-box;
+	margin-left:40px;
+}
+span{
+	margin-left:-95px;
+}
+label{
+	width:200%;
+	margin-left:-100px;
+}

@@ -1,0 +1,27 @@
+body{
+	background-color:#eeeeee;
+}
+input[type=text],input[type=email],input[type=tel],input[type=password],input[type=date],select{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 50px;
+    box-sizing: border-box;
+}
+input[type=checkbox]{
+    padding :inherit;
+}
+button{
+    color:white;
+    background-color: green;
+    padding: 10px 15px;
+    width:60%;
+    margin-left:55%;
+    display:block;
+}
+#rst{
+	background-color: red;
+	color: white;
+	margin-left:0%;
+	padding: 10px 15px;
+    width:80%;
+}

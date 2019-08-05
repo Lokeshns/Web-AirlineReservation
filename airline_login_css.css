@@ -1,0 +1,44 @@
+body{
+	background-color:#eeeeee;
+}
+input[type=email],input[type=password],input[type=text]{
+	width: 100%;
+	padding: 10px;
+	margin: 15px 15px;
+	box-sizing: border-box;
+}
+input[type=checkbox]{
+    padding :inherit;
+}
+div form{
+	width:100%;
+	margin:50px 38%;
+}
+button{
+    color: white;
+    background-color: green;
+    padding: 10px 15px;
+    width:50%;
+	margin-left:55%;
+	display:inline-block;
+}
+#rst{
+	background-color: red;
+	color: white;
+	margin-left:0%;
+	padding: 10px 15px;
+    width:80%;
+}
+img{
+	border-radius:50%;
+	width:170px;
+	margin-left:83px;
+}
+p{
+	width:100%;
+	margin-left:200%;
+}
+#new1{
+	width:100%;
+	margin-left:-55%;
+}
